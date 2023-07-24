@@ -8,8 +8,10 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.get("/", function (req, res) {
-  console.log(__dirname);
   return res.render("home");
+});
+app.get("/profile", function (req, res) {
+  return res.render("profile");
 });
 
 app.listen(port, function (err) {
